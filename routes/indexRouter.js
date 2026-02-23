@@ -2,6 +2,7 @@ const { Router } = require("express")
 const path = require("node:path")
 const router = Router()
 
+const indexController = require("../controller/indexController")
 
 const messages = [
   {
@@ -16,7 +17,7 @@ const messages = [
   }
 ];
 
-
+router.get("/",indexController.listMessagesGet)
 router.get("/",(req,res) => {
     res.render("index", {title: "Mini Message Board",messages: messages})
 })
