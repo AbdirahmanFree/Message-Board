@@ -7,9 +7,6 @@ const SQL = `
         text TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT NOW()
     );
-
-    INSERT INTO messages (username,text)
-    VALUES ('abdirahman_abdulahi','Welcome to my message board !');
 `
 
 async function main(){
