@@ -18,17 +18,8 @@ const messages = [
 ];
 
 router.get("/",indexController.listMessagesGet)
+router.get("/new",indexController.newMessageGet)
+router.post("/new",indexController.newMessagePost)
 
-
-router.get("/new", (req,res) => {
-    res.render("form")
-})
-
-router.post("/new",(req,res) => {
-    const user = req.body.user
-    const text = req.body.text
-    messages.push({text:text, user:user, added: new Date()})
-    res.redirect("/")
-})
 
 module.exports = router

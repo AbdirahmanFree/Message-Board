@@ -4,7 +4,7 @@
         <h1><%=title%></h1>
         <ul>
             <% messages.map((message) => { %>
-                <li> <%=message.user%>: <%=message.text%> - <%=message.added%></li>
+                <li> <%=message.username%>: <%=message.text%> - <%=message.created_at%></li>
             <% }) %>
         </ul>
         <a href="new">new</a>
