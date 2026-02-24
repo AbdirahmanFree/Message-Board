@@ -1,3 +1,17 @@
 const { Client } = require("pg")
 
+const SQL = `
+    CREATE TABLE IF NOT EXISTS messages (
+        id SERIAL PRIMARY KEY,
+        username VARCHAR(50) NOT NULL,
+        text TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT NOW()
+    );
 
+    INSERT INTO messages (username,text)
+    VALUES ('abdirahman_abdulahi','Welcome to my message board !');
+`
+
+async function main(){
+    console.log('seeding...');
+}
