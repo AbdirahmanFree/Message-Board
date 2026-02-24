@@ -18,9 +18,7 @@ const messages = [
 ];
 
 router.get("/",indexController.listMessagesGet)
-router.get("/",(req,res) => {
-    res.render("index", {title: "Mini Message Board",messages: messages})
-})
+
 
 router.get("/new", (req,res) => {
     res.render("form")
