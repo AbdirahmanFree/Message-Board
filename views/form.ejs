@@ -1,14 +1,22 @@
 <html>
     <head></head>
     <body>
+        <% if (locals.errors) { %>
+            <ul>
+                <% errors.map((error) => { %>
+                    <li><%=error.msg %></li>
+
+                <%})%>
+            </ul>
+        <% } %>
         <form method="POST" action="/new">
             <div>
-                <label for="user">Name:</label>
-                <input id="user" name="user"/>
+                <label for="username">Name:</label>
+                <input id="username" name="username" required/>
             </div>
             <div>
                 <label for="text">Text:</label>
-                <input id="text" name="text"/>
+                <input id="text" name="text" required/>
             </div>
             <button type="submit">Submit</button>
             

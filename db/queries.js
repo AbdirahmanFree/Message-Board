@@ -2,8 +2,8 @@ const pool = require("./pool")
 
 
 async function newMessage(message){
-    const {user, text} = message
-    await pool.query("INSERT INTO messages(username,text) VALUES ($1,$2);",[user,text])
+    const {username, text} = message
+    await pool.query("INSERT INTO messages(username,text) VALUES ($1,$2);",[username,text])
 
 }
 
